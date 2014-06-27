@@ -1,0 +1,15 @@
+proguard-project.txt
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
+build/artifacts/*
+bin/*
+gen/*
+local.properties
+test/${artifacts.dir}/*
+test/bin/*
+test/cobertura.ser
+test/instrumented/*
+test/reports/*
+test/coverageHtml/*
+lint.xml
