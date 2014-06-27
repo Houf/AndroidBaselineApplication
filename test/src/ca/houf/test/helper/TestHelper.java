@@ -12,7 +12,7 @@ import org.robolectric.annotation.Config;
 @Ignore
 @Config(manifest=Config.NONE)
 @RunWith(RobolectricTestRunner.class)
-public class RhcTestHelper
+public class TestHelper
 {
     @Rule public final JUnitRuleMockery mocker = new JUnitRuleMockery()
     {

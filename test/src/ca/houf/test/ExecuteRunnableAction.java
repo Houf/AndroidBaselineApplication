@@ -1,4 +1,4 @@
-package ca.houf.test
+package ca.houf.test;
 
 import org.hamcrest.Description;
 import org.jmock.api.Action;
