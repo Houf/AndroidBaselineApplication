@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ballistic-calculator" default="release" basedir=".">
-	<dirname property="ballistic-calculator.dirname" file="${ant.file.ballistic-calculator}"/>
+<project name="houf.build" default="release" basedir=".">
+	<dirname property="houf.build.dirname" file="${ant.file.houf.build}"/>
 
     <property environment="env"/>
     <property name="artifacts.dir" value="${basedir}/artifacts"/>
@@ -30,7 +30,7 @@
 	</target>
 
 	<target name="package-android">
-        <ant antfile="${ballistic-calculator.dirname}/../build.xml" inheritAll="false" target="build">
+        <ant antfile="${houf.build.dirname}/../build.xml" inheritAll="false" target="build">
             <!-- Override properties -->
             <property name="artifacts.dir" value="${artifacts.dir}"/>
             <property name="version.number" value="${version.number}"/>
@@ -39,12 +39,12 @@
     </target>
 
 	<target name="run-unit-tests">
-        <ant antfile="${ballistic-calculator.dirname}/../test/build.xml" inheritAll="false" target="runTestsOnly">
+        <ant antfile="${houf.build.dirname}/../test/build.xml" inheritAll="false" target="runTestsOnly">
         </ant>
     </target>
 
 	<target name="copy-tests-results">
-        <ant antfile="${ballistic-calculator.dirname}/../test/build.xml" inheritAll="false" target="copy-to-artifacts">
+        <ant antfile="${houf.build.dirname}/../test/build.xml" inheritAll="false" target="copy-to-artifacts">
 			<property name="artifacts.dir" value="${artifacts.dir}"/>
         </ant>
     </target>

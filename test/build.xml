@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ballistic-calculator-UnitTests" default="runTestsOnly">
+<project name="unitTests" default="runTestsOnly">
 
-	<dirname property="ballistic-calculator-UnitTests.dirname" file="${ant.file.ballistic-calculator-UnitTests}"/>
+	<dirname property="unitTests.dirname" file="${unitTests}"/>
 	
 	<property environment="env"/>
     <property name="junit4.dir" value="./libs"/>
@@ -108,10 +108,6 @@
                 -->
                 <include name="**/*.class" />
                 <exclude name="**/*Test.class" />
-                <exclude name="ca/rheinmetall/ballistic_calculator/activity/*Activity*.class" />
-                <exclude name="ca/rheinmetall/ballistic_calculator/BuildConfig.class" />
-                <exclude name="ca/rheinmetall/ballistic_calculator/R.class" />
-                <exclude name="ca/rheinmetall/ballistic_calculator/R$*.class" />
             </fileset>
         </cobertura-instrument>
     </target>
@@ -160,7 +156,7 @@
     
 	<target name="copy-to-artifacts">
         <move todir="${artifacts.dir}/"
-        file="${ballistic-calculator-UnitTests.dirname}/${coverage.html.dir}/" failonerror="false"/>
+        file="${unitTests.dirname}/${coverage.html.dir}/" failonerror="false"/>
     </target>
 
     <target name="coverage" depends="clean,compile,instrument,run-tests,html-coverage-report" 

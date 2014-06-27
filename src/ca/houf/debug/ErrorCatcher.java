@@ -24,7 +24,7 @@ public class ErrorCatcher implements Thread.UncaughtExceptionHandler
     private final Context applicationContext;
     private final String errorOutputDirectory;
     private final Thread.UncaughtExceptionHandler previousHandler;
-    private final static String TAG = "SC2PS Ballistic Calculator error catcher";
+    private final static String TAG = "Houf application error catcher";
 
     public ErrorCatcher(final Context context, final String folder)
     {
@@ -92,7 +92,7 @@ public class ErrorCatcher implements Thread.UncaughtExceptionHandler
     {
         try
         {
-            final String str = "SC2PS.BallisticCalculator.stack-" + System.currentTimeMillis() + ".stacktrace";
+            final String str = "houf.stack-" + System.currentTimeMillis() + ".stacktrace";
             final FileOutputStream localFileOutputStream = new FileOutputStream(new File(errorOutputDirectory+str));
             localFileOutputStream.write(paramString.getBytes());
             localFileOutputStream.close();
